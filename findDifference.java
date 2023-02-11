@@ -10,24 +10,25 @@ public class findDifference {
 
     static int findDifferenceintwoarray(int[] arr1 , int[] arr2 , int d)
     {
-      int count = 0;
-      for(int i =0;i<arr1.length;i++)
-      {
-        int x=0;
+        int count = 0;
+      for(int i=0;i<arr1.length;i++)
+      { 
+        int first = arr1[i];
+        boolean flag = false;
         for(int j=0;j<arr2.length;j++)
         {
-            int difference = Math.abs(i-j);
-            if(difference<=d)
+            int second = arr2[j];
+            if(Math.abs(second  - first) <= d)
             {
-                j=arr2.length;
+               flag= true;
+               break;
             }
-            else{
-                x++;
-            }
-        } if(x==arr2.length)
-        {
-            count++;
+
         }
-      } return count; 
+        if(flag==false)
+        {
+            count ++;
+        }
+      } return count;
     }
 }
