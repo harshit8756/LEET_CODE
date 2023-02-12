@@ -6,9 +6,9 @@
 
 public class find_bad_version {
     public static void main(String[] args) {
-        int n = 5;
-        // int bad =  firstBadVersion(n);
-       System.out.println(bad);
+    //     int n = 5;
+    //     // int bad =  firstBadVersion(n);
+    //    System.out.println(bad);
         
     }
 
@@ -21,6 +21,7 @@ public class find_bad_version {
             if(isBadVersion(mid))
             {
                 end = mid;
+            
             }
             else
             {
